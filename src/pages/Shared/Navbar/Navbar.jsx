@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from '../../../assets/doll.png'
+import logo from '../../../assets/logo3.png'
 const Navbar = () => {
     return (
-        <div className="navbar ms-3 me-3 ">
+        <div className="navbar   ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -17,9 +17,9 @@ const Navbar = () => {
       </ul>
     </div>
 
- <div className=' hidden lg:flex ms-10 space-x-24'>
-  <img src={logo} alt="" className='w-24' />
-  <h5 className='text-2xl mt-6  font-semibold italic'>Doll House</h5>
+ <div className=' hidden lg:flex'>
+  <img src={logo} alt="" className='w-10' />
+  <h5 className='text-2xl mt-2 ms-2  font-semibold italic'>Toys Hub</h5>
  </div>
 
   </div>
@@ -34,7 +34,7 @@ const Navbar = () => {
         <li><a>Blogs</a></li>
     </ul>
   </div>
-  <div className="navbar-end me-14">
+  <div className="navbar-end ">
     <a className="btn px-7 bg-purple-600">Login</a>
   </div>
 </div>

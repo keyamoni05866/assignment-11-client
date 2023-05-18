@@ -1,14 +1,14 @@
 import React from 'react';
-import logo from '../../../assets/doll.png'
+import logo from '../../../assets/logo3.png'
 const Footer = () => {
     return (
     <div>
        <footer className="footer p-10 bg-purple-50 text-base-content">
   <div className=''>
   <div className=''>
-  <img src={logo} alt=""  className=' w-28 rounded-lg '/>
+  <img src={logo} alt=""  className=' w-16'/>
   </div>
-    <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+    <p>Toys Hub Ltd.<br/>Providing reliable tech since 1992</p>
   </div> 
   <div>
     <span className="footer-title">Useful Links</span> 
@@ -45,7 +45,7 @@ const Footer = () => {
 </footer>
 <footer className="footer footer-center p-4 bg-purple-50 text-base-content">
   <div>
-    <p>Copyright © 2023 - All right reserved by Doll House Ltd</p>
+    <p>Copyright © 2023 - All right reserved by Toys Hub Ltd</p>
   </div>
 </footer>
     </div>
