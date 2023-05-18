@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProviders";
 
 const Register = () => {
+    const {createUser} = useContext(AuthContext);
+
+    const handleRegister = event =>{
+        event.preventDefault();
+        const form= event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const photo = form.photo.value;
+        const password = form.password.value;
+        // console.log(name, email, password, photo)
+        createUser(email, password)
+        .then(result =>{
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error => console.error(error))
+    }
   return (
     <div
       className="hero min-h-screen"
@@ -18,13 +36,15 @@ const Register = () => {
             </h1>
             <div className="card ms-3 me-3  max-w-sm shadow-2xl bg-base-100">
               <div className="card-body  ">
-                <div className="form-control">
+               <form onSubmit={handleRegister}>
+               <div className="form-control">
                   <label className="label">
                     <span className="label-text">Name</span>
                   </label>
                   <input
                     type="text"
                     placeholder="Name"
+                    name="name"
                     className="input input-bordered"
                   />
                 </div>
@@ -33,8 +53,10 @@ const Register = () => {
                     <span className="label-text">Email</span>
                   </label>
                   <input
-                    type="text"
+                  required
+                    type="email"
                     placeholder="email"
+                    name="email"
                     className="input input-bordered"
                   />
                 </div>
@@ -45,6 +67,7 @@ const Register = () => {
                   <input
                     type="text"
                     placeholder="Photo URL"
+                    name="photo"
                     className="input input-bordered"
                   />
                 </div>
@@ -53,8 +76,9 @@ const Register = () => {
                     <span className="label-text">Password</span>
                   </label>
                   <input
-                    type="text"
+                    type="password"
                     placeholder="password"
+                    name="password"
                     className="input input-bordered"
                   />
                   <label className="label">
@@ -77,6 +101,7 @@ const Register = () => {
                     Sign Up With Google
                   </button>
                 </div>
+               </form>
               </div>
             </div>
           </div>
