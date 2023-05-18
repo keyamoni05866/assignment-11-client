@@ -13,9 +13,11 @@ const Navbar = () => {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-  <div className='ms-10'>
-    <img src={logo} alt=""  className=' w-28'/>
-  </div>
+
+    <img src={logo} alt=""  className=' w-24 ms-8 me-3'/>
+    <h5 className='text-2xl ms-4 font-semibold italic text-purple-500'>Dolls House</h5>
+ 
+
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
