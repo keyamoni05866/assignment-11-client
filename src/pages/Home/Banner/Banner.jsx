@@ -5,7 +5,7 @@ const Banner = () => {
   
     <div className="hero min-h-fit space-y-12  py-12 bg-base-200 ">
   <div className="hero-content flex-col lg:flex-row-reverse">
-    <img src={img4} className=" max-w-md rounded-lg shadow-2xl" />
+    <img src={img4} className=" lg:max-w-md rounded-lg shadow-2xl" />
     <div className=' me-12'>
       <h1 className="text-4xl font-bold">Welcome to "Toys Hub"</h1> 
       <p className='text-xl font-semibold mt-2'> Your ultimate destination for animal toys and fun!</p>
