@@ -49,12 +49,14 @@ const Navbar = () => {
   <div className="navbar-end ">
     {
       user && (
-        <img src={user?.photoURL
+ 
+          <img src={user?.photoURL
         }
         data-toggle="tooltip"
         title={user?.displayName}
-        className=' w-16 h-16 mr-4 rounded-full'
+        className=' w-16 h-16 mr-4 rounded-full '
        />
+
       )
     }
    {

@@ -1,0 +1,77 @@
+{
+    "toys": {
+      "Elephant Toys": [
+        {
+          "id": 1,
+          "name": "Elephant Plush Toy",
+          "price": 19.99,
+          "rating": 4.5,
+          "quantity": 10
+        },
+        {
+          "id": 2,
+          "name": "Elephant Stack-Up Toy",
+          "price": 14.99,
+          "rating": 4.2,
+          "quantity": 5
+        },
+        {
+          "id": 3,
+          "name": "Baby Elephant Rattle",
+          "price": 12.99,
+          "rating": 4.7,
+          "quantity": 8
+        }
+      
+      ],
+      "Lion Toys": [
+        {
+          "id": 4,
+          "name": "Lion Stuffed Animal",
+          "price": 9.99,
+          "rating": 4.0,
+          "quantity": 15
+        },
+        {
+          "id": 5,
+          "name": "Roaring Lion Plush Toy",
+          "price": 17.99,
+          "rating": 4.8,
+          "quantity": 3
+        },
+        {
+          "id": 6,
+          "name": "Lion Hand Puppet",
+          "price": 7.99,
+          "rating": 4.6,
+          "quantity": 12
+        }
+       
+      ],
+      "Monkey Toys": [
+        {
+          "id": 7,
+          "name": "Cuddly Monkey Plush Toy",
+          "price": 11.99,
+          "rating": 4.3,
+          "quantity": 6
+        },
+        {
+          "id": 8,
+          "name": "Monkey Teether Toy",
+          "price": 16.99,
+          "rating": 4.4,
+          "quantity": 9
+        },
+        {
+          "id": 9,
+          "name": "Jungle Monkey Figurine Set",
+          "price": 13.99,
+          "rating": 4.1,
+          "quantity": 7
+        }
+      
+      ]
+    }
+  }
+  
