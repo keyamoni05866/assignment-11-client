@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import loginImg from "../../assets/login.jpg";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 const Login = () => {
-    const {logIn} = useContext(AuthContext);
+    const {logIn, SignUpOrLoginWithGoogle} = useContext(AuthContext);
+    const [error , setError] = useState('');
        const  handleLogin = event =>{
            event.preventDefault();
            const form = event.target;
@@ -13,10 +14,25 @@ const Login = () => {
            .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser)
+            setError('')
            })
            .catch(error => {
             console.error(error)
+            setError('Please Enter correct email or password')
         })
+       }
+
+       const handleForGoogleLogin =() =>{
+         SignUpOrLoginWithGoogle()
+         .then(result =>{
+          const googleUser = result.user;
+          console.log(googleUser);
+          setError('')
+         })
+         .catch(error =>{
+          console.error(error);
+    
+         } )
        }
   return (
     <div className="">
@@ -46,12 +62,14 @@ const Login = () => {
                   <label className="label">
                     <span className="label-text">Password</span>
                   </label>
+        
                   <input
                     type="password"
                     placeholder="password"
                     name="password"
                     className="input input-bordered"
                   />
+                  <p className="text-sm text-orange-400">{error}</p>
                   <label className="label">
                  <p className="text-sm">Don't have an account <Link to="/register" className=" text-purple-600 font-semibold ps-1">Sign Up</Link></p>
                   </label>
@@ -59,7 +77,7 @@ const Login = () => {
                 <div className="flex mt-6 gap-2 ">
                 
                   <input type="submit" value="Login" className="btn px-7 bg-purple-600 w-1/2"/>
-                  <button className="btn px-7 bg-purple-600 w-1/2 ">Login With Google</button>
+                  <button onClick={handleForGoogleLogin} className="btn px-7 bg-purple-600 w-1/2 ">Login With Google</button>
                 </div>
              </form>
               </div>

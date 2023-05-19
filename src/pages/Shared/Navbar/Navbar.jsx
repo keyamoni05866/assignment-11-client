@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../../assets/logo3.png'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Providers/AuthProviders';
 const Navbar = () => {
+
+  const {user,logOut} = useContext(AuthContext);
+
+  const handleLogOut =() =>{
+    logOut()
+    .then(() =>{})
+    .catch(error => console.error(error))
+  }
     return (
         <div className="navbar   ">
   <div className="navbar-start">
@@ -34,10 +43,27 @@ const Navbar = () => {
         <li><Link to="/myToy">My Toys</Link></li>
         <li><Link to="/addToy">Add A Toy</Link></li>
         <li><Link to="/blog">Blogs</Link></li>
+       
     </ul>
   </div>
   <div className="navbar-end ">
-    <Link to="/login" className="btn px-7 bg-purple-600" >Login</Link>
+    {
+      user && (
+        <img src={user?.photoURL
+        }
+        data-toggle="tooltip"
+        title={user?.displayName}
+        className=' w-16 h-16 mr-4 rounded-full'
+       />
+      )
+    }
+   {
+    user ? (
+      <button onClick={handleLogOut}  className="btn px-7 bg-purple-600" >Log Out</button>
+   
+    ):
+    (   <Link to="/login" className="btn px-7 bg-purple-600" >Login</Link>)
+   }
   </div>
 </div>
     );

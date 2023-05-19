@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
+    const {createUser,SignUpOrLoginWithGoogle, userProfileUpdate} = useContext(AuthContext);
+    const [error, setError] = useState('');
 
     const handleRegister = event =>{
         event.preventDefault();
@@ -13,14 +14,36 @@ const Register = () => {
         const email = form.email.value;
         const photo = form.photo.value;
         const password = form.password.value;
+
+        if(password.length < 6){
+          setError('Please Enter at least 6 character password')
+        }
         // console.log(name, email, password, photo)
         createUser(email, password)
         .then(result =>{
-            const user = result.user;
-            console.log(user)
+            const createdUser = result.user;
+            console.log(createdUser)
+            setError('')
+            userProfileUpdate(createdUser, {
+              displayName: name,
+              photoURL: photo,
+            })
+            
+            .then(() =>{})
+            .catch(error => console.error(error))
+            form.reset()
         })
+    
         .catch(error => console.error(error))
     }
+    const handleForGoogle =() =>{
+      SignUpOrLoginWithGoogle()
+      .then(result =>{
+        const user = result.user;
+        console.log(user);
+      })
+      .catch(error => console.error(error))
+     }
   return (
     <div
       className="hero min-h-screen"
@@ -81,6 +104,7 @@ const Register = () => {
                     name="password"
                     className="input input-bordered"
                   />
+                  <p className="text-sm  text-orange-500">{error}</p>
                   <label className="label">
                     <p className="text-sm">
                       Already Have an Account{" "}
@@ -97,8 +121,8 @@ const Register = () => {
                   <button className="btn px-7 bg-purple-600 w-1/2 ">
                     Sign Up
                   </button>
-                  <button className="btn px-7 bg-purple-600 w-1/2 ">
-                    Sign Up With Google
+                  <button onClick={handleForGoogle} className="btn px-7 bg-purple-600 w-1/2 ">
+                    Sign Up With Google 
                   </button>
                 </div>
                </form>
