@@ -1,34 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-const ShopCategory = () => {
-    const [toys, setToys] = useState([])
+import Teddy from "./Teddy";
+import Elephant from "../Elephant/Elephant";
 
-    useEffect(() =>{
-        fetch('toyData.json')
-        .then(res => res.json())
-        .then(data =>setToys(data) )
-    },[])
+const ShopCategory = () => {
+  
+
    
   return (
   <div className="mt-9">
       <Tabs className="text-center   ">
     <TabList className="border-none text-purple-500 ">
-    <Tab>Elephant Toys</Tab>
-      <Tab>Lion Toys</Tab>
+    <Tab>Teddy Toys</Tab>
+      <Tab>Elephant Toys</Tab>
       <Tab>Monkey Toys</Tab>
     </TabList>
 
     <TabPanel>
-        {
-            toys.forEach(toy => <p>{toy.name}</p>)
-        }
+     <Teddy></Teddy>
      </TabPanel>
     <TabPanel>
-      <h2>Any content 2</h2>
+      <Elephant></Elephant>
     </TabPanel>
     <TabPanel>
-      <h2>Any content 2</h2>
+    
     </TabPanel>
   </Tabs>
   </div>

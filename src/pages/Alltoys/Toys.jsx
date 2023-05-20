@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Toys = ({toy}) => {
     const {_id,category,productName,price,quantity,sellerName,photo} = toy;
     return (
-        <div className=''>
+        
                  
                   <tr className=' max-w-11/12  bg-base-100 shadow-xl'>
            
@@ -23,14 +24,14 @@ const Toys = ({toy}) => {
                </div>
             
              </div>
-             <button className="px-3 py-2 rounded text-white ms-96 mr-3 mb-3 bg-purple-500  "> View Details</button>
+           <Link to={`/allToys/${_id}`}>  <button className="px-3 py-2 rounded text-white ms-96 mr-3 mb-3 bg-purple-500  "> View Details</button></Link>
            </td>
        
 
           
        
          </tr>
-        </div>
+      
     );
 };
 

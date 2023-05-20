@@ -3,7 +3,8 @@ import Banner from '../Banner/Banner';
 import Gallery from '../../Gallery/Gallery';
 import ExtraSection1 from '../../ExtraSection/ExtraSection1';
 import ExtraSection2 from '../../Extrasection2/ExtraSection2';
-import ShopCategory from '../../ShopCategory/ShopCategory';
+import ShopCategory from '../../ShopCategory/Teddy/ShopCategory';
+
 
 const Home = () => {
     return (

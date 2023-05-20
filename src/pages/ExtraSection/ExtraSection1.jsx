@@ -2,7 +2,7 @@ import React from "react";
 
 const ExtraSection1 = () => {
   return (
-    <div className="mt-5 mb-5">
+    <div className="mt-5 mb-5"  data-aos="animation_name">
       <h1 className="text-center text-3xl  font-semibold italic">Best Sellers</h1>
       <div className="grid  lg:grid-cols-3 gap-5 mt-8"> 
       <div className="card w-96 bg-base-100 shadow-xl">
