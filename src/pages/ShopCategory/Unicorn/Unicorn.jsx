@@ -10,7 +10,7 @@ const Unicorn = () => {
         .then(data => setUnicorns(data))
      },[])
     return (
-        <div className='grid grid-cols-2 gap-8 w-3/4 mx-auto mt-8'>
+        <div className='lg:grid grid-cols-2 gap-8 lg:w-3/4 mx-auto mt-8'>
             {
                  unicorns.map(unicorn => <UnicornCard
                   key={unicorn._id}
