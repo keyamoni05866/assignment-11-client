@@ -3,7 +3,7 @@ import React from "react";
 const ExtraSection1 = () => {
   return (
     <div className="mt-5 mb-5"  data-aos="animation_name">
-      <h1 className="text-center text-3xl  font-semibold italic">Best Sellers</h1>
+      <h1 className="text-center text-3xl  font-semibold italic">Best Sellers Toys</h1>
       <div className="grid  lg:grid-cols-3 gap-5 mt-8"> 
       <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img src="https://img.freepik.com/free-psd/3d-icon-fairy-tale-inspiration_23-2149987268.jpg?size=626&ext=jpg&ga=GA1.1.1498671356.1683020323&semt=ais" alt="Shoes"  className="w-full  h-44"/></figure>
