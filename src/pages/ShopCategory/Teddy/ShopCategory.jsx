@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Teddy from "./Teddy";
 import Elephant from "../Elephant/Elephant";
+import Unicorn from "../Unicorn/Unicorn";
 
 const ShopCategory = () => {
   
@@ -14,7 +15,7 @@ const ShopCategory = () => {
     <TabList className="border-none text-purple-500 ">
     <Tab>Teddy Toys</Tab>
       <Tab>Elephant Toys</Tab>
-      <Tab>Monkey Toys</Tab>
+      <Tab>Unicorn Toys</Tab>
     </TabList>
 
     <TabPanel>
@@ -24,7 +25,7 @@ const ShopCategory = () => {
       <Elephant></Elephant>
     </TabPanel>
     <TabPanel>
-    
+    <Unicorn></Unicorn>
     </TabPanel>
   </Tabs>
   </div>

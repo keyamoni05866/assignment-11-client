@@ -1,10 +1,23 @@
-import React, { useContext } from "react";
-import { AuthContext } from "../../Providers/AuthProviders";
-import swal from "sweetalert";
+import React from "react";
+import { useLoaderData } from "react-router-dom";
 
-const AddToys = () => {
-  const { user } = useContext(AuthContext);
-  const handleAddToys = (event) => {
+const Update = () => {
+  const toy = useLoaderData();
+  const {
+    _id,
+    description,
+    productName,
+    price,
+    quantity,
+    sellerName,
+    photo,
+    sellerEmail,
+    rating,
+    category,
+  } = toy;
+  // console.log(toy)
+
+  const handleUpdateToy = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
@@ -16,7 +29,7 @@ const AddToys = () => {
     const rating = form.rating.value;
     const quantity = form.quantity.value;
     const description = form.description.value;
-    const toys = {
+    const UpdateToys = {
      
       productName: name,
       sellerName,
@@ -29,21 +42,21 @@ const AddToys = () => {
       description,
     };
 
-    console.log(toys);
-    fetch('http://localhost:5000/addToys', {
-      method: 'POST',
+   
+    fetch(`http://localhost:5000/myToys/${_id}`, {
+      method: 'PUT',
       headers:{
         'content-type': 'application/json'
       },
-      body: JSON.stringify(toys)
+      body: JSON.stringify(UpdateToys)
     })
     .then(res => res.json())
     .then(data => {
       console.log(data)
       if(data.insertedId){
         swal({
-          title: "Thanks for Adding Toy",
-          text: "Your product added Successfully!",
+          title: "Update",
+          text: "Your Toy Updated!",
           icon: "success",
           button: "Ok",
         });
@@ -51,24 +64,21 @@ const AddToys = () => {
       form.reset()
     })
   };
-
   return (
     <div className=" max-w-7xl  bg-base-200 rounded-lg pt-3 pb-7">
       <h2 className="text-2xl text-center mb-5  text-purple-500 font-semibold italic uppercase">
-        Add A Toy Please
+        Update Your Toy Information.
       </h2>
-      <form
-        onSubmit={handleAddToys}
-        className="shadow-2xl bg-base-100  max-w-5xl   mx-auto px-9  py-4 rounded-lg"
-      >
+      <form onSubmit={handleUpdateToy} className="shadow-2xl bg-base-100  max-w-5xl   mx-auto px-9  py-4 rounded-lg">
         <div className="grid w-full grid-cols-1 lg:grid-cols-2 gap-2 ">
           <div className="form-control ">
             <label className="label">
-              <span className="label-text">Name</span>
+              <span className="label-text">Toy Name</span>
             </label>
             <input
               type="text"
               placeholder="name"
+              defaultValue={productName}
               name="name"
               className="input input-bordered"
             />
@@ -81,7 +91,7 @@ const AddToys = () => {
               type="text"
               placeholder="seller name"
               name="sellerName"
-              defaultValue={user?.displayName}
+              defaultValue={sellerName}
               className="input input-bordered"
             />
           </div>
@@ -93,7 +103,7 @@ const AddToys = () => {
               type="text"
               placeholder="seller email"
               name="seller email"
-              defaultValue={user?.email}
+              defaultValue={sellerEmail}
               className="input input-bordered"
             />
           </div>
@@ -105,6 +115,7 @@ const AddToys = () => {
               type="text"
               placeholder="photo URL"
               name="photo"
+              defaultValue={photo}
               className="input input-bordered"
             />
           </div>
@@ -112,10 +123,11 @@ const AddToys = () => {
             <label className="label">
               <span className="label-text">Sub-Category</span>
             </label>
-            <select className="select select-bordered" name="category">
-              <option disabled selected>
-                Select Category
-              </option>
+            <select
+              className="select select-bordered"
+              defaultValue={category}
+              name="category"
+            >
               <option>Elephant Toys</option>
               <option>Teddy Toys</option>
               <option>Unicorn Toys</option>
@@ -129,6 +141,7 @@ const AddToys = () => {
               type="text"
               placeholder="price"
               name="price"
+              defaultValue={price}
               className="input input-bordered"
             />
           </div>
@@ -140,6 +153,7 @@ const AddToys = () => {
               type="text"
               placeholder="rating"
               name="rating"
+              defaultValue={rating}
               className="input input-bordered"
             />
           </div>
@@ -151,6 +165,7 @@ const AddToys = () => {
               type="text"
               placeholder="available quantity"
               name="quantity"
+              defaultValue={quantity}
               className="input input-bordered"
             />
           </div>
@@ -163,13 +178,14 @@ const AddToys = () => {
             className="textarea textarea-bordered h-28 w-full"
             placeholder="Description"
             name="description"
+            defaultValue={description}
           ></textarea>
         </div>
         <div className="form-control mt-6">
           <input
             type="submit"
             className="btn btn-block bg-purple-600"
-            value="Add A Toy"
+            value="Update Toy"
           />
         </div>
       </form>
@@ -177,4 +193,4 @@ const AddToys = () => {
   );
 };
 
-export default AddToys;
+export default Update;

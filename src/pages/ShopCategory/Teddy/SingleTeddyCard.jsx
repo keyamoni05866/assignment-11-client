@@ -3,7 +3,7 @@ import "@smastrom/react-rating/style.css";
 import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
 const SingleTeddyCard = ({ teddy }) => {
-  console.log(teddy);
+
   const {_id, productName, photo, price, rating } = teddy;
   return (
     <div className="card card-compact w-96 bg-base-100 shadow-xl">
