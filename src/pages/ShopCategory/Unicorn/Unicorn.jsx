@@ -5,7 +5,7 @@ const Unicorn = () => {
     const [unicorns, setUnicorns] = useState([])
 
     useEffect(() =>{
-        fetch('http://localhost:5000/categories/unicorn')
+        fetch('https://assignment-11-server-kohl.vercel.app/categories/unicorn')
         .then(res => res.json())
         .then(data => setUnicorns(data))
      },[])

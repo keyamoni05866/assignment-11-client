@@ -11,7 +11,7 @@ const MyToys = () => {
     
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/myToys?email=${(user?.email)}`)
+        fetch(`https://assignment-11-server-kohl.vercel.app/myToys?email=${(user?.email)}`)
         .then(res => res.json())
         .then(data => setMyToys(data))
     },[])
@@ -20,7 +20,7 @@ const MyToys = () => {
 
         const proceed = confirm('Are You Sure to Delete')
         if(proceed){
-         fetch(`http://localhost:5000/myToys/${id}`, {
+         fetch(`https://assignment-11-server-kohl.vercel.app/myToys/${id}`, {
             method: 'DELETE'
          })
          .then(res => res.json())

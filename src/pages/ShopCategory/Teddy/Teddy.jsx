@@ -5,7 +5,7 @@ const Teddy = () => {
      const [teddys, setTeddys] = useState([])
 
      useEffect(() =>{
-        fetch('http://localhost:5000/categories/teddy')
+        fetch('https://assignment-11-server-kohl.vercel.app/categories/teddy')
         .then(res => res.json())
         .then(data => setTeddys(data))
      },[])

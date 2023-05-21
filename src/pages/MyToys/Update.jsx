@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProviders";
 
 const Update = () => {
+  const {user} = useContext(AuthContext);
   const toy = useLoaderData();
   const {
     _id,
@@ -43,7 +45,7 @@ const Update = () => {
     };
 
    
-    fetch(`http://localhost:5000/myToys/${_id}`, {
+    fetch(`https://assignment-11-server-kohl.vercel.app/myToys/${_id}`, {
       method: 'PUT',
       headers:{
         'content-type': 'application/json'
@@ -53,7 +55,7 @@ const Update = () => {
     .then(res => res.json())
     .then(data => {
       console.log(data)
-      if(data.insertedId){
+      if(data.modifiedCount > 0){
         swal({
           title: "Update",
           text: "Your Toy Updated!",
@@ -61,7 +63,7 @@ const Update = () => {
           button: "Ok",
         });
       }
-      form.reset()
+    
     })
   };
   return (

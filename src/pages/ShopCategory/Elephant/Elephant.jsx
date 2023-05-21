@@ -5,7 +5,7 @@ const Elephant = () => {
     const [elephants, setElephants] = useState([])
 
     useEffect(() =>{
-       fetch('http://localhost:5000/categories/elephant')
+       fetch('https://assignment-11-server-kohl.vercel.app/categories/elephant')
        .then(res => res.json())
        .then(data => setElephants(data))
     },[])
