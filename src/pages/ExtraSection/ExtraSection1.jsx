@@ -2,12 +2,12 @@ import React from "react";
 
 const ExtraSection1 = () => {
   return (
-    <div className="mt-5 mb-5"  data-aos="fade-down">
+    <div className="mt-5 mb-5"  >
       <h1 className="text-center text-3xl  font-semibold italic">Best Sellers Toys</h1>
       <div className="grid  lg:grid-cols-3 gap-5 mt-8"> 
       <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img src="https://img.freepik.com/free-psd/3d-icon-fairy-tale-inspiration_23-2149987268.jpg?size=626&ext=jpg&ga=GA1.1.1498671356.1683020323&semt=ais" alt="Shoes"  className="w-full  h-44"/></figure>
-  <div className="card-body text-center mt-0 "  data-aos="fade-up">
+  <div className="card-body text-center mt-0 "  >
     <h2 className=" text-center text-lg ">Specials</h2>
     <p className="text-xl ">Toy-Name:Unicorn</p>
     <p className="mb-4">Price:$20</p>

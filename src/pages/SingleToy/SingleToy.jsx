@@ -30,7 +30,7 @@ const SingleToy = () => {
 
             <p className="text-xl mt-2"><span className='font-semibold text-2xl'>Description:</span> {description}</p>
          <div className='rating'>
-    <div className='flex text-xl justify-center items-end ms-72
+    <div className='flex text-xl justify-center items-end ms-64
     '>
     <span className='flex'>Rating: {rating}   
            <Rating value={rating} style={{ maxWidth: 100 }} readOnly >
