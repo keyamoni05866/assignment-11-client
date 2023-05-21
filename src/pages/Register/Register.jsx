@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
@@ -6,7 +6,9 @@ import { AuthContext } from "../../Providers/AuthProviders";
 const Register = () => {
     const {createUser,SignUpOrLoginWithGoogle, userProfileUpdate} = useContext(AuthContext);
     const [error, setError] = useState('');
-
+    useEffect(()=>{
+      document.title = " Toys Hub | Register";
+  },[])
     const handleRegister = event =>{
         event.preventDefault();
         const form= event.target;

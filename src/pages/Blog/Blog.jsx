@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Blog = () => {
+  useEffect(()=>{
+    document.title = " Toys Hub | Blogs";
+},[])
     return (
         <div className='mt-4 mb-10'>
             <h1 className='text-2xl font-semibold'>1.What is an access token and refresh token? How do they work and where should we store them?</h1>

@@ -1,5 +1,5 @@
 import { Rating } from '@smastrom/react-rating';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import '@smastrom/react-rating/style.css'
 
@@ -7,7 +7,9 @@ const SingleToy = () => {
       const singleToy = useLoaderData();
       const {_id,description,productName,price,quantity,sellerName,photo,sellerEmail,rating} = singleToy;
   
-    
+      useEffect(()=>{
+        document.title = " Toys Hub | Single Toy";
+    },[])
     return (
         <div className="  px-20 py-20 bg-base-200">
         <div className=" flex flex-cols-1 gap-8">

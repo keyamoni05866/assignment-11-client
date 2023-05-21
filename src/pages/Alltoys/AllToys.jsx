@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import Toys from "./Toys";
 
 const AllToys = () => {
   const toys = useLoaderData();
   console.log(toys);
+  useEffect(()=>{
+    document.title = " Toys Hub | All Toys";
+},[])
 
   return (
     <div className="overflow-x-auto w-full bg-base-200 rounded-lg">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '../Banner/Banner';
 import Gallery from '../../Gallery/Gallery';
 import ExtraSection1 from '../../ExtraSection/ExtraSection1';
@@ -7,6 +7,10 @@ import ShopCategory from '../../ShopCategory/Teddy/ShopCategory';
 
 
 const Home = () => {
+
+    useEffect(()=>{
+        document.title = " Toys Hub | Home";
+    },[])
     return (
         <div>
             <Banner></Banner>

@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
 const MyToy = ({myToy, handleDelete}) => {
     const {_id,description,productName,price,quantity,sellerName,photo,sellerEmail,rating} = myToy;
 
-
+    useEffect(()=>{
+      document.title = " Toys Hub | My Toys";
+  },[])
    
     return (
         <tr>

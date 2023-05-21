@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import loginImg from "../../assets/login.jpg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
@@ -8,6 +8,9 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+    useEffect(()=>{
+      document.title = " Toys Hub | Login";
+  },[])
        const  handleLogin = event =>{
            event.preventDefault();
            const form = event.target;
