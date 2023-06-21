@@ -12,14 +12,7 @@ const PrivateRoute = ({children}) => {
     if(user){
         return children;
     }
-    if(!user){
-        swal({
-      
-            text: "Please Log in First",
-            icon: "warning",
-            button: "Ok",
-          });
-    }
+ 
     return  <Navigate state={{from: location}} to="/login" replace></Navigate>
 };
 
