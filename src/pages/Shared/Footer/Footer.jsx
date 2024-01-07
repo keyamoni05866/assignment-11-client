@@ -2,11 +2,11 @@ import React from 'react';
 import logo from '../../../assets/logo3.png'
 const Footer = () => {
     return (
-    <div>
-       <footer className="footer p-10 bg-purple-50 text-base-content">
+    <div className='bg-[#092635] text-white px-0 lg:px-[24px] '>
+       <footer className="footer p-10">
   <div className=''>
   <div className=''>
-  <img src={logo} alt=""  className=' w-16'/>
+  <img src={logo} alt=""  className=' w-16 bg-purple-50  rounded-2xl '/>
   </div>
     <p>Toys Hub Ltd.<br/>Providing reliable tech since 1992</p>
   </div> 
@@ -43,7 +43,7 @@ const Footer = () => {
 
   
 </footer>
-<footer className="footer footer-center p-4 bg-purple-50 text-base-content">
+<footer className="footer footer-center p-4 ">
   <div>
     <p>Copyright © 2023 - All right reserved by Toys Hub Ltd</p>
   </div>

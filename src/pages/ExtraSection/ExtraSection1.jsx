@@ -2,9 +2,9 @@ import React from "react";
 
 const ExtraSection1 = () => {
   return (
-    <div className="mt-5 mb-5"  >
-      <h1 className="text-center text-3xl  font-semibold italic">Best Sellers Toys</h1>
-      <div className="grid  lg:grid-cols-3 gap-5 mt-8"> 
+    <div className="mt-36 pb-20 max-w-7xl mx-auto"  >
+      <h1 className="text-center text-2xl text-lime-100 font-semibold italic">----Best Sellers Toys----</h1>
+      <div className="grid  lg:grid-cols-3 gap-5 mt-16 text-black"> 
       <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img src="https://img.freepik.com/free-psd/3d-icon-fairy-tale-inspiration_23-2149987268.jpg?size=626&ext=jpg&ga=GA1.1.1498671356.1683020323&semt=ais" alt="Shoes"  className="w-full  h-44"/></figure>
   <div className="card-body text-center mt-0 "  >

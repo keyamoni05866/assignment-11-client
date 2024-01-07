@@ -10,14 +10,17 @@ const ShopCategory = () => {
 
    
   return (
-  <div className="mt-9">
-      <Tabs className="text-center   ">
-    <TabList className="border-none text-purple-500 ">
-    <Tab>Teddy Toys</Tab>
-      <Tab>Elephant Toys</Tab>
-      <Tab>Unicorn Toys</Tab>
+  <div className="mt-32 max-w-7xl mx-auto text-black">
+    <h2 className="text-center text-xl text-lime-100 mb-8">------Category Wise Toys-----</h2>
+      <Tabs className="text-center">
+      
+    <TabList className="border-none text-purple-500  ">
+   
+    <Tab className="btn  bg-purple-600 normal-case me-6">Teddy Toys</Tab>
+      <Tab className="btn  bg-purple-600 normal-case me-6">Elephant Toys</Tab>
+      <Tab className="btn  bg-purple-600 normal-case me-6">Unicorn Toys</Tab>
     </TabList>
-
+    
     <TabPanel>
      <Teddy></Teddy>
      </TabPanel>

@@ -43,13 +43,13 @@ const Login = () => {
          } )
        }
   return (
-    <div className="">
-        <h1 className="text-center text-3xl font-semibold mt-2 italic">Login Now</h1>
+    <div className="bg-[#092635] text-white pb-16">
+        <h2 className="text-center text-2xl font-semibold pt-8 italic text-lime-100">---Login Now--</h2>
       <div className="hero min-h-full py-12 rounded-none">
         
         <div className=" ">
-          <div className="flex h-full">
-            <div className=" w-1/2 h-96   shadow-2xl">
+          <div className="lg:flex h-full mx-5 lg:mx-0">
+            <div className=" lg:w-1/2 h-96     shadow-2xl">
               <img src={loginImg} alt="" className="h-96 " />
             </div>
             <div className="card rounded-none w-full    max-w-sm shadow-2xl bg-base-100">
@@ -79,7 +79,7 @@ const Login = () => {
                   />
                   <p className="text-sm text-orange-400">{error}</p>
                   <label className="label">
-                 <p className="text-sm">Don't have an account <Link to="/register" className=" text-purple-600 font-semibold ps-1">Sign Up</Link></p>
+                 <p className="text-sm text-black">Don't have an account ? <Link to="/register" className=" text-purple-600 font-semibold ps-1">Sign Up</Link></p>
                   </label>
                 </div>
                 <div className="flex mt-6 gap-2 ">

@@ -11,9 +11,9 @@ const Teddy = () => {
      },[])
 
     return (
-        <div className='lg:grid grid-cols-2 gap-8 lg:w-3/4 mx-auto mt-8'>
+        <div className='lg:grid grid-cols-3 gap-10 mx-auto mt-3 mb-10 '>
             {
-                teddys.map(teddy => <SingleTeddyCard key={teddy._id}
+                teddys.map(teddy => <SingleTeddyCard  key={teddy._id}
                     teddy={teddy}
                 ></SingleTeddyCard> )
             }

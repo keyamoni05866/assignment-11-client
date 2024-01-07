@@ -12,7 +12,7 @@ const Home = () => {
         document.title = " Toys Hub | Home";
     },[])
     return (
-        <div>
+        <div className='bg-[#092635] text-white '>
             <Banner></Banner>
             <Gallery></Gallery>
             <ShopCategory></ShopCategory>

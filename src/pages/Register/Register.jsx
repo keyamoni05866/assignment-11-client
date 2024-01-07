@@ -1,11 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 
 const Register = () => {
     const {createUser,SignUpOrLoginWithGoogle, userProfileUpdate} = useContext(AuthContext);
     const [error, setError] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
     useEffect(()=>{
       document.title = " Toys Hub | Register";
   },[])
@@ -32,6 +35,7 @@ const Register = () => {
             })
             
             .then(() =>{})
+            navigate(from, {replace: true})
             .catch(error => console.error(error))
             form.reset()
         })
@@ -48,23 +52,23 @@ const Register = () => {
      }
   return (
     <div
-      className="hero min-h-screen"
+      className="hero  "
       style={{
         backgroundImage: `url("https://img.freepik.com/premium-photo/cute-puppy-with-red-heart-balloons_6529-1778.jpg?size=626&ext=jpg&ga=GA1.1.1498671356.1683020323&semt=ais")`,
       }}
     >
-      <div className="hero min-h-full py-6 rounded-none bg-opacity-60">
+      <div className="hero   py-12 rounded-none bg-[#092635]  bg-opacity-90">
         <div>
-          <div>
-            <h1 className="text-center text-3xl font-semibold mt-2 mb-5 italic">
-              Please Register
-            </h1>
-            <div className="card ms-3 me-3  max-w-sm shadow-2xl bg-base-100">
+          <div >
+            <h2 className="text-center text-2xl font-semibold  text-purple-400 mb-5 italic">
+              ---Please Register---
+            </h2>
+            <div className="card ms-3 me-3    shadow-2xl bg-[#092635]  ">
               <div className="card-body  ">
-               <form onSubmit={handleRegister}>
-               <div className="form-control">
+               <form onSubmit={handleRegister} >
+               <div className="form-control ">
                   <label className="label">
-                    <span className="label-text">Name</span>
+                    <span className="label-text text-white">Name</span>
                   </label>
                   <input
                     type="text"
@@ -75,7 +79,7 @@ const Register = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Email</span>
+                    <span className="label-text text-white">Email</span>
                   </label>
                   <input
                   required
@@ -87,7 +91,7 @@ const Register = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Photo URL</span>
+                    <span className="label-text text-white">Photo URL</span>
                   </label>
                   <input
                     type="text"
@@ -98,7 +102,7 @@ const Register = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Password</span>
+                    <span className="label-text text-white">Password</span>
                   </label>
                   <input
                     type="password"
@@ -107,9 +111,9 @@ const Register = () => {
                     className="input input-bordered"
                   />
                   <p className="text-sm  text-orange-500">{error}</p>
-                  <label className="label">
+                  <label className="label text-white">
                     <p className="text-sm">
-                      Already Have an Account{" "}
+                      Already Have an Account ?
                       <Link
                         to="/login"
                         className=" text-purple-600 font-semibold ps-1"
