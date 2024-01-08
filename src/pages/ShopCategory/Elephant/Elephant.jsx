@@ -10,7 +10,7 @@ const Elephant = () => {
        .then(data => setElephants(data))
     },[])
     return (
-        <div className='lg:grid grid-cols-2 gap-8 lg:w-3/4 mx-auto mt-8'>
+        <div className='lg:grid grid-cols-2 gap-8 lg:w-3/4 mx-auto mt-8' >
             {
                 elephants.map(elephant => <ElephantCard key={ elephant._id} 
                    elephant={elephant}

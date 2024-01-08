@@ -44,10 +44,14 @@ const Login = () => {
        }
   return (
     <div className="bg-[#092635] text-white pb-16">
-        <h2 className="text-center text-2xl font-semibold pt-8 italic text-lime-100">---Login Now--</h2>
+        <h2 className="text-center text-2xl font-semibold pt-8 italic text-lime-100" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="2000">---Login Now--</h2>
       <div className="hero min-h-full py-12 rounded-none">
         
-        <div className=" ">
+        <div data-aos="fade-up"
+    data-aos-easing="linear"
+    data-aos-duration="2000">
           <div className="lg:flex h-full mx-5 lg:mx-0">
             <div className=" lg:w-1/2 h-96     shadow-2xl">
               <img src={loginImg} alt="" className="h-96 " />

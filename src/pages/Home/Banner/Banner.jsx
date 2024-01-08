@@ -6,8 +6,10 @@ const Banner = () => {
     return (
   
     
-  <div className=" lg:flex justify-center items-center  mx-auto">
-  <div className=' ms-5 pt-8  lg:me-12 lg:ms-28'>
+  <div className=" lg:flex justify-center items-center  mx-auto" data-aos="fade-up"
+  data-aos-easing="linear"
+  data-aos-duration="2000" >
+  <div className=' ms-5 pt-8  lg:me-12 lg:ms-28' >
       <h2 className="text-2xl flex lg:text-4xl font-bold text-purple-500">Welcome to "Toys Hub"
        </h2> 
     
@@ -25,7 +27,7 @@ const Banner = () => {
       interactive figures and  educational play sets. Our toys are carefully curated to provide a <br /> variety of options for every animal lover out there. </p>
       <button className="btn bg-purple-600 hover:bg-purple-900">Get Started</button>
     </div>
-<div  className='height-[500px] width-[500px]'>
+<div  className='height-[500px] width-[500px]' >
 <Player
   autoplay
   loop

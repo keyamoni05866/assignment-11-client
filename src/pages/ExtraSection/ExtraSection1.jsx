@@ -3,9 +3,13 @@ import React from "react";
 const ExtraSection1 = () => {
   return (
     <div className="mt-36 pb-20 max-w-7xl mx-auto"  >
-      <h1 className="text-center text-2xl text-lime-100 font-semibold italic">----Best Sellers Toys----</h1>
+      <h1 className="text-center text-2xl text-lime-100 font-semibold italic" data-aos="fade-up"
+    data-aos-easing="linear"
+    data-aos-duration="2000">----Best Sellers Toys----</h1>
       <div className="grid  lg:grid-cols-3 gap-5 mt-16 text-black"> 
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-right"
+  data-aos-easing="linear"
+  data-aos-duration="2000">
   <figure><img src="https://img.freepik.com/free-psd/3d-icon-fairy-tale-inspiration_23-2149987268.jpg?size=626&ext=jpg&ga=GA1.1.1498671356.1683020323&semt=ais" alt="Shoes"  className="w-full  h-44"/></figure>
   <div className="card-body text-center mt-0 "  >
     <h2 className=" text-center text-lg ">Specials</h2>
@@ -16,7 +20,9 @@ const ExtraSection1 = () => {
     </div>
   </div>
 </div>
-<div className="card w-96 bg-base-100 shadow-xl">
+<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-right"
+  data-aos-easing="linear"
+  data-aos-duration="2000">
   <figure><img src="https://img.freepik.com/free-vector/rocking-horse-realistic_1284-6010.jpg?size=626&ext=jpg&ga=GA1.1.1498671356.1683020323&semt=ais" alt="Shoes"  className="w-full  h-44"/></figure>
   <div className="card-body text-center mt-0">
     <h2 className=" text-center text-lg ">Specials</h2>
@@ -27,7 +33,9 @@ const ExtraSection1 = () => {
     </div>
   </div>
 </div>
-<div className="card w-96 bg-base-100 shadow-xl">
+<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-right"
+  data-aos-easing="linear"
+  data-aos-duration="2000">
   <figure><img src="https://img.freepik.com/free-photo/play-dough-background-with-snail-high-angle_23-2149700384.jpg?size=626&ext=jpg&ga=GA1.1.1498671356.1683020323&semt=ais" alt="Shoes"  className="w-full  h-44"/></figure>
   <div className="card-body text-center mt-0">
     <h2 className=" text-center text-lg ">Specials</h2>
@@ -38,7 +46,9 @@ const ExtraSection1 = () => {
     </div>
   </div>
 </div>
-<div className="card w-96 bg-base-100 shadow-xl">
+<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-down"
+  data-aos-easing="linear"
+  data-aos-duration="2000">
   <figure><img src="https://img.freepik.com/free-photo/one-teddy-bear-hugs-another_144627-15245.jpg?size=626&ext=jpg&ga=GA1.1.1498671356.1683020323&semt=ais" alt="Shoes"  className="w-full  h-44"/></figure>
   <div className="card-body text-center mt-0">
     <h2 className=" text-center text-lg ">Specials</h2>
@@ -49,7 +59,9 @@ const ExtraSection1 = () => {
     </div>
   </div>
 </div>
-<div className="card w-96 bg-base-100 shadow-xl">
+<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-down"
+  data-aos-easing="linear"
+  data-aos-duration="2000">
   <figure><img src="https://img.freepik.com/premium-photo/cute-lion-yarn-amigurumi_520826-6175.jpg?size=626&ext=jpg&ga=GA1.1.1498671356.1683020323&semt=ais" alt="Shoes"  className="w-full  h-44"/></figure>
   <div className="card-body text-center mt-0">
     <h2 className=" text-center text-lg ">Specials</h2>
@@ -60,7 +72,9 @@ const ExtraSection1 = () => {
     </div>
   </div>
 </div>
-<div className="card w-96 bg-base-100 shadow-xl">
+<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-down"
+  data-aos-easing="linear"
+  data-aos-duration="2000">
   <figure><img src="https://img.freepik.com/free-photo/cute-plush-toy-studio_23-2150312288.jpg?size=626&ext=jpg&ga=GA1.1.1498671356.1683020323&semt=ais" alt="Shoes"  className="w-full  h-44"/></figure>
   <div className="card-body text-center mt-0">
     <h2 className=" text-center text-lg ">Specials</h2>

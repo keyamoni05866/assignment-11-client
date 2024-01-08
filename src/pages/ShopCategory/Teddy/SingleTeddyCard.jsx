@@ -6,7 +6,9 @@ const SingleTeddyCard = ({ teddy }) => {
 
   const {_id, productName, photo, price, rating } = teddy;
   return (
-    <div className="card card-compact w-96 bg-base-100 text-black shadow-xl mt-5">
+    <div className="card card-compact w-96 bg-base-100 text-black shadow-xl mt-5"  data-aos="fade-right"
+    data-aos-easing="linear"
+    data-aos-duration="2000" >
       <figure>
         <img src={photo} className=" w-full  h-44" />
       </figure>

@@ -17,12 +17,14 @@ const Gallery = () => {
  return (
      <>
  
-         <div className=' lg:mt-28'>
+         <div className=' lg:mt-28' data-aos="fade-down"
+  data-aos-easing="linear"
+  data-aos-duration="2000">
             <h3 className='text-xl text-lime-100 text-center font-semibold mb-8  normal-case italic '>----Please visit Our Toys Hub Gallery---</h3>
          <ResponsiveMasonry
         columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
     >
-        <Masonry gutter='12px'>
+        <Masonry gutter='12px' >
             {images.map((image, i) => (
                 <img
                 className= '  h-48 rounded-lg'

@@ -10,7 +10,7 @@ const AllToys = () => {
 },[])
 
   return (
-    <div className="overflow-x-auto w-full bg-[#092635] pb-24   ">
+    <div className="overflow-x-auto w-full bg-[#092635] pb-24" >
       <h2 className="text-purple-500 text-center font-medium text-2xl py-3 italic">---All Toys---</h2>
       <table className="mx-auto font-dark ">
      

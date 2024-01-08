@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
 import MyToy from './MyToy';
-import Swal from 'sweetalert2';
+
+import { Link } from 'react-router-dom';
+
 
 const MyToys = () => {
     const {user} = useContext(AuthContext);
-    // console.log(user?.email)
-    // console.log(email)
+  
     const [myToys, setMyToys] = useState([]);
     
 
@@ -15,6 +16,9 @@ const MyToys = () => {
         .then(res => res.json())
         .then(data => setMyToys(data))
     },[])
+
+   
+
 
     const handleDelete = id =>{
 
@@ -35,34 +39,50 @@ const MyToys = () => {
         }
     }
     return (
-      <div className='mb-9 mt-9'>
-          <div className=' rounded-lg'>
-            <h2 className='text-2xl  mb-3 text-center text-purple-500 font-semibold italic uppercase underline'>Your Toys</h2>
+ 
+      
+      
+<div className="overflow-x-auto bg-[#092635] pb-24  lg:px-[120px]  pt-5 " >
+
+
+          {
+            myToys.length !== 0 ? ( <h2 className='text-xl lg:text-3xl  mb-8 text-center text-purple-400 font-semibold italic '>---Your Added Toys---</h2>)
+            : ( <>
+               <h2 className=' text-xl lg:text-4xl my-[170px] mb-3 text-center   text-red-400 font-semibold italic normal-case '>NO Toys found </h2>
+               <div className=' flex justify-center items-center mt-7'>
+    
+    <Link to="/addToy"  className='btn lg:px-5 btn-sm bg-purple-500 normal-case mx-auto'>Please Add</Link>
+               </div>
+         
+            </>)
+          } 
      
 
-<div className="overflow-x-auto w-full ms-11">
-  <table className=" table w-full ">
+  <table className=" mx-auto font-dark ">
 
   
-    <tbody className=''>
+    <tbody >
+    <div className="grid lg:grid-cols-2 gap-9 justify-center items-center">
+    {
   
- {
-    myToys.map(myToy => <MyToy
-      key={myToy._id}
-      myToy={myToy}
-      handleDelete={handleDelete}
-    ></MyToy>)
- }
-  
-
+      myToys.map(myToy => <MyToy
+        key={myToy._id}
+        myToy={myToy}
+        handleDelete={handleDelete}
+      ></MyToy>)
+     
+    
+     
+     }
+</div>
   
     </tbody>
 
     
   </table>
 </div>
-        </div>
-      </div>
+       
+      
     );
 };
 

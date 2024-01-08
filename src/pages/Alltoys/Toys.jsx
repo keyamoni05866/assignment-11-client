@@ -6,7 +6,9 @@ const Toys = ({toy}) => {
     return (
         
                  
-                  <tr className='lg:max-w-11/12  bg-base-100 shadow-xl  rounded-lg'>
+                  <tr className='lg:max-w-11/12  bg-base-100 shadow-xl  rounded-lg' data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="2000">
            
            <td >
              <div className="flex items-center  rounded-lg p-8 ">

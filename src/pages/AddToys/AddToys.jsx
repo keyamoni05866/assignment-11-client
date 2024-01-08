@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import swal from "sweetalert";
+import image from '../../assets/slider4.avif'
 
 const AddToys = () => {
   const { user } = useContext(AuthContext);
@@ -57,18 +58,28 @@ const AddToys = () => {
   };
 
   return (
-    <div className=" max-w-7xl  bg-base-200 rounded-lg pt-3 pb-7">
-      <h2 className="text-2xl text-center mb-5  text-purple-500 font-semibold italic uppercase">
-        Add A Toy Please
+    <div className=" bg-[#092635] mx-auto  pt-3 pb-8">
+      <h2 className="text-2xl text-center   text-purple-500 font-semibold italic "  data-aos="fade-up"
+    data-aos-easing="linear"
+    data-aos-duration="2000">
+        ---Fill Toy Detail Please---
       </h2>
-      <form
+<div className="  w-full lg:flex py-14 lg:px-[230px]">
+  
+
+
+
+  <div className="shadow-xl lg:mx-auto  lg:ms-10  lg:w-1/2 mx-2 "  data-aos="fade-left"
+    data-aos-easing="linear"
+    data-aos-duration="2000">
+  <form
         onSubmit={handleAddToys}
-        className="shadow-2xl bg-base-100  max-w-5xl   mx-auto px-9  py-4 rounded-lg"
+        className="shadow-2xl bg-base-100 rounded-sm  mx-auto px-9  py-4 "
       >
-        <div className="grid w-full grid-cols-1 lg:grid-cols-2 gap-2 ">
+        <div className="grid  w-full grid-cols-2 lg:grid-cols-2 gap-2 ">
           <div className="form-control ">
             <label className="label">
-              <span className="label-text">Name</span>
+              <span className="label-text">Toy Name</span>
             </label>
             <input
               type="text"
@@ -103,7 +114,7 @@ const AddToys = () => {
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Photo URL</span>
+              <span className="label-text">Toy Photo URL</span>
             </label>
             <input
               type="text"
@@ -172,11 +183,18 @@ const AddToys = () => {
         <div className="form-control mt-6">
           <input
             type="submit"
-            className="btn btn-block bg-purple-600"
+            className="btn btn-md px-12 ms-1  normal-case  bg-purple-600"
             value="Add A Toy"
           />
         </div>
       </form>
+  </div>
+  <div className="shadow-2xl lg:w-1/2 mx-2 lg:mx-0"  data-aos="fade-right"
+    data-aos-easing="linear"
+    data-aos-duration="2000">
+  <img src={image} alt=""  className="h-[612px] rounded-sm shadow-2xl"/>
+</div>
+</div>
     </div>
   );
 };

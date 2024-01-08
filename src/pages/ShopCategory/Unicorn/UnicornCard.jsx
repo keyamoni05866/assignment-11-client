@@ -5,7 +5,9 @@ import "@smastrom/react-rating/style.css";
 const UnicornCard = ({unicorn}) => {
     const {_id, productName, photo, price, rating } = unicorn;
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="card card-compact w-96 bg-base-100 shadow-xl"  data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="2000">
         <figure>
           <img src={photo} className=" w-full  h-44" />
         </figure>

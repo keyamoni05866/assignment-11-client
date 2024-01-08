@@ -10,7 +10,9 @@ const Unicorn = () => {
         .then(data => setUnicorns(data))
      },[])
     return (
-        <div className='lg:grid grid-cols-2 gap-8 lg:w-3/4 mx-auto mt-8'>
+        <div className='lg:grid grid-cols-2 gap-8 lg:w-3/4 mx-auto mt-8' data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="2000">
             {
                  unicorns.map(unicorn => <UnicornCard
                   key={unicorn._id}

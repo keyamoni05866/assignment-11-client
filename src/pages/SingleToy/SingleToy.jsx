@@ -13,10 +13,14 @@ const SingleToy = () => {
     return (
         <div className="   py-36  bg-[#092635] text-white lg:px-[200px]">
         <div className=" lg:flex lg:flex-cols-1 gap-8">
-      <div className='lg:w-3/4 '>
+      <div className='lg:w-3/4 ' data-aos="fade-right"
+    data-aos-easing="linear"
+    data-aos-duration="2000">
       <img src={photo} className=" h-64 w-full rounded-lg shadow-2xl" />
       </div>
-          <div className=' w-3/4 ms-8'>
+          <div className=' w-3/4 ms-8' data-aos="fade-left"
+    data-aos-easing="linear"
+    data-aos-duration="2000">
             <h1 className="text-2xl mt-8 lg:mt-0 lg:text-4xl font-semibold italic  text-purple-500">Toy Name: {productName}</h1>
             <div className=' mt-5 '>
             <h1 className="text-2xl "><span className='font-semibold'>Seller Name:</span> {sellerName}</h1>

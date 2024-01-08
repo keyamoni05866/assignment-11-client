@@ -60,10 +60,14 @@ const Register = () => {
       <div className="hero   py-12 rounded-none bg-[#092635]  bg-opacity-90">
         <div>
           <div >
-            <h2 className="text-center text-2xl font-semibold  text-purple-400 mb-5 italic">
+            <h2 className="text-center text-2xl font-semibold  text-purple-400 mb-5 italic" data-aos="fade-up"
+    data-aos-easing="linear"
+    data-aos-duration="2000">
               ---Please Register---
             </h2>
-            <div className="card ms-3 me-3    shadow-2xl bg-[#092635]  ">
+            <div className="card ms-3 me-3    shadow-2xl bg-[#092635]  " data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="2000">
               <div className="card-body  ">
                <form onSubmit={handleRegister} >
                <div className="form-control ">

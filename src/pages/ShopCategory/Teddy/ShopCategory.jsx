@@ -10,9 +10,11 @@ const ShopCategory = () => {
 
    
   return (
-  <div className="mt-32 max-w-7xl mx-auto text-black">
+  <div className="mt-32 max-w-7xl mx-auto text-black" >
     <h2 className="text-center text-xl text-lime-100 mb-8">------Category Wise Toys-----</h2>
-      <Tabs className="text-center">
+      <Tabs className="text-center"  data-aos="fade-up"
+  data-aos-easing="linear"
+  data-aos-duration="2000" >
       
     <TabList className="border-none text-purple-500  ">
    
